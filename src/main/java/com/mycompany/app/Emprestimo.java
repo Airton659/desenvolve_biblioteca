@@ -1,3 +1,5 @@
+package com.mycompany.app;
+
 import java.util.Date;
 
 public class Emprestimo {
@@ -11,7 +13,7 @@ public class Emprestimo {
         this.livro = livro;
         this.dataRetirada = dataRetirada;
         this.dataDevolucao = dataDevolucao;
-        livro.setDisponivel(false);
+        livro.validarDisponibilidade(false);
     }
 
     public Usuario getUsuario() {

@@ -1,3 +1,6 @@
+package com.mycompany.app;
+
+
 public class Livro {
 
     private String titulo;
@@ -28,7 +31,7 @@ public class Livro {
         return disponivel;
     }
 
-    public void setDisponivel(boolean disponivel) {
+    public void validarDisponibilidade(boolean disponivel) {
         this.disponivel = disponivel;
     }
 

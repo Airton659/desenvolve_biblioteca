@@ -17,7 +17,7 @@ public class EmprestimoTest{
     public void testEmprestimo() {
         Date dataRetirada = new Date();
         Date dataDevolucao = new Date();
-        Livro livro = new Livro("Java Basics", new Autor("Alan Turing", "Inglês",new Livro[0]), "Tecnologia");
+        Livro livro = new Livro("Java Basics", new Autor("Alan Turing", "Inglês"), "Tecnologia", true);
         Usuario usuario = new Usuario("Gabriel", 21);
         
         Emprestimo emprestimo = new Emprestimo (usuario, livro, dataRetirada, dataDevolucao);

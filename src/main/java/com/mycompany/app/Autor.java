@@ -7,8 +7,8 @@ public class Autor extends Pessoa {
     private String nacionalidade;
     private List<Livro> obrasPublicadas;
 
-    public Autor (String nome, String nacionalidade, Livro[] livros) {
-        super(nome, livros);
+    public Autor (String nome, String nacionalidade) {
+        super(nome, new Livro[0]);
         this.nacionalidade = nacionalidade;
         this.obrasPublicadas = new ArrayList<>();
     }

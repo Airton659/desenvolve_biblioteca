@@ -30,10 +30,10 @@ public class PessoaTest {
 
     @Test
     public void testGetLivros() {
-        Autor autor = new Autor ("Jessica Felix", "Brasileira", new Livro[0]);
+        Autor autor = new Autor ("Jessica Felix", "Brasileira");
 
-        Livro livro1 = new Livro("Java Básico", autor, "Tecnologia");
-        Livro livro2 = new Livro("Java Avançado", autor, "Tecnologia");
+        Livro livro1 = new Livro("Java Básico", autor, "Tecnologia", true);
+        Livro livro2 = new Livro("Java Avançado", autor, "Tecnologia", false);
 
         Livro[] livros = {livro1,livro2};
 
@@ -46,14 +46,14 @@ public class PessoaTest {
 
     @Test
     public void testSetLivros() {
-        Autor autor = new Autor ("Jessica Felix", "Brasileira", new Livro[0]);
-        Livro livroInicial = new Livro ("Livro 1", autor, "Poesia");
+        Autor autor = new Autor ("Jessica Felix", "Brasileira");
+        Livro livroInicial = new Livro ("Livro 1", autor, "Poesia", true);
 
         Livro[] livrosInicial = {livroInicial};
         Pessoa pessoa = new Pessoa("José", livrosInicial);
 
-        Livro livro1 = new Livro("Java Básico", autor, "Tecnologia");
-        Livro livro2 = new Livro("Java Avançado", autor, "Tecnologia");
+        Livro livro1 = new Livro("Java Básico", autor, "Tecnologia", true);
+        Livro livro2 = new Livro("Java Avançado", autor, "Tecnologia", false);
 
         Livro[] novosLivros= {livro1, livro2};
         pessoa.setLivros(novosLivros);

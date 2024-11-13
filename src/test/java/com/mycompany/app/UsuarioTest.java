@@ -1,8 +1,10 @@
 package com.mycompany.app;
 
 import org.junit.Test;
-import com.mycompany.app.Usuario;
-import com.mycompany.app.Autor;
+import com.mycompany.app.Model.Usuario;
+import com.mycompany.app.Model.Autor;
+import com.mycompany.app.Model.Emprestimo;
+import com.mycompany.app.Model.Livro;
 
 import java.util.Date;
 import static org.junit.Assert.*;

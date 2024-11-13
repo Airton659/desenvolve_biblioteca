@@ -1,7 +1,7 @@
 package com.mycompany.app;
 
-import com.mycompany.app.Livro;
-import com.mycompany.app.Autor;
+import com.mycompany.app.Model.Livro;
+import com.mycompany.app.Model.Autor;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

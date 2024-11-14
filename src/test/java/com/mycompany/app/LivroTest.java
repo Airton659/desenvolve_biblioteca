@@ -37,11 +37,11 @@ public class LivroTest {
     }
 
     @Test
-    public void testValidarDisponibilidade() {
+    public void testSetDisponivel() {
         Autor autor = new Autor("Jess", "Brasileira");
         Livro livro1 = new Livro("Java Basico", autor, "tecnologia", true);
         Livro livro2 = new Livro("Java Avançado", autor, "tecnologia", false);
-        livro1.validarDisponibilidade(true);
+        livro1.setDisponivel(true);
         assertTrue(livro1.isDisponivel());
         assertFalse(livro2.isDisponivel());
 

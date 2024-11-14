@@ -12,14 +12,14 @@ public class AutorTest {
 
     @Test
     public void testGetNacionalidade() {
-        Autor autor = new Autor("Jess", "Brasileira");
+        Autor autor = new Autor("Jess", "Brasileira", true);
         assertEquals("Brasileira", autor.getNacionalidade());
     }
 
     @Test
     public void testGetObrasPublicadasVazia() {
         Livro[] livros = {};
-        Autor autor = new Autor("Jessica Felix", "Brasileira");
+        Autor autor = new Autor("Jessica Felix", "Brasileira", false);
 
         Livro[] obrasPublicadas = autor.getObrasPublicadas();
         assertEquals(0, obrasPublicadas.length);
@@ -28,7 +28,7 @@ public class AutorTest {
     @Test
     public void testGetObrasPublicadasPorGenero() {
         Livro [] livros = {};
-        Autor autor = new Autor("Jessica Felix", "Brasileira");
+        Autor autor = new Autor("Jessica Felix", "Brasileira", true);
         
         Livro livro = new Livro("Java Básico", autor, "Tecnologia", true);    
         Livro livro2 = new Livro("Java Avançado", autor, "Tecnologia", true);    
@@ -48,6 +48,14 @@ public class AutorTest {
         assertEquals(livro3, obrasLiteratura[0]);
 
     }
+    
+    @Test
+    public void testIsUsuario () {
+        Autor autorUsuario = new Autor("Jessica Felix", "Brasileira", true);
+        assertTrue(autorUsuario.isUsuario());
 
+        Autor autorNaoUsuario = new Autor("Jessica Felix", "Brasileira", false);
+        assertFalse(autorNaoUsuario.isUsuario());
+    }
 
 }

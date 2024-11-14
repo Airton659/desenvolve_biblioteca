@@ -13,7 +13,7 @@ public class Emprestimo {
         this.livro = livro;
         this.dataRetirada = dataRetirada;
         this.dataDevolucao = dataDevolucao;
-        livro.validarDisponibilidade(false);
+        livro.validarDisponibilidade();
     }
 
     public Usuario getUsuario() {

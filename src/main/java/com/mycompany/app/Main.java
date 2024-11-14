@@ -6,14 +6,16 @@ import com.mycompany.app.Model.Autor;
 import com.mycompany.app.Model.Emprestimo;
 import com.mycompany.app.Model.Livro;
 import com.mycompany.app.Model.Usuario;
+import com.mycompany.app.Model.Artigo;
 
 public class Main {
     public static void main(String[] args) {
-        Autor autor = new Autor("Jessica Felix", "Brasileira");
+        Autor autor = new Autor("Jessica Felix", "Brasileira", true);
         Livro livro = new Livro("Java for Beginners", autor, "Tecnologia", true);
         autor.adicionarObraPublicada(livro);
 
         Usuario usuario = new Usuario("Lucas Rafael", 25);
+        Artigo artigo = new Artigo("Entendendo Compiladores", autor, "tecnologia", true);
 
         Date dataAtual = new Date();
         Emprestimo emprestimo = new Emprestimo(usuario, livro, dataAtual, dataAtual);  
@@ -26,5 +28,8 @@ public class Main {
         System.out.println("Idade: " + usuario.getIdade());
         System.out.println("Data de Retirada: " + emprestimo.getDataRetirada());
         System.out.println("Data de Devolucao: " + emprestimo.getDataDevolucao());
+        System.out.println("Artigo: " + artigo.getTitulo());
+        System.out.println("Usuario: " + autor.isUsuario());
+
     }
 }

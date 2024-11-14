@@ -6,11 +6,13 @@ import java.util.List;
 public class Autor extends Pessoa {
     private String nacionalidade;
     private List<Livro> obrasPublicadas;
+    private boolean isUsuario;
 
-    public Autor (String nome, String nacionalidade) {
+    public Autor (String nome, String nacionalidade, boolean isUsuario) {
         super(nome, new Livro[0]);
         this.nacionalidade = nacionalidade;
         this.obrasPublicadas = new ArrayList<>();
+        this.isUsuario = isUsuario;
     }
 
     public String getNacionalidade() {
@@ -35,5 +37,8 @@ public class Autor extends Pessoa {
         obrasPublicadas.add(livro);
     }
 
+    public boolean isUsuario () {
+        return isUsuario;
+    }
 
 }

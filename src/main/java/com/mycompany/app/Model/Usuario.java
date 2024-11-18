@@ -1,8 +1,8 @@
 package com.mycompany.app.Model;
 
-import com.mycompany.app.Interface.AutorInterface;
+import com.mycompany.app.Interface.PublicavelInterface;
 
-public class Usuario extends Pessoa implements AutorInterface {
+public class Usuario extends Pessoa implements PublicavelInterface {
     private int idade;
     private Emprestimo[] historicoEmprestimo;
 

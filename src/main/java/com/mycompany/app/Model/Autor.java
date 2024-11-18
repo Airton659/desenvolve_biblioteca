@@ -3,10 +3,13 @@ package com.mycompany.app.Model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mycompany.app.Interface.PublicavelInterface;
+
 public class Autor extends Pessoa {
     private String nacionalidade;
     private List<Livro> obrasPublicadas;
     private boolean isUsuario;
+    private PublicavelInterface estrategiaPublicacao;
 
     public Autor (String nome, String nacionalidade, boolean isUsuario) {
         super(nome, new Livro[0]);
@@ -39,6 +42,18 @@ public class Autor extends Pessoa {
 
     public boolean isUsuario () {
         return isUsuario;
+    }
+
+    public void setEstrategiaPublicacao(PublicavelInterface estrategiaPublicacao) {
+        this.estrategiaPublicacao = estrategiaPublicacao;
+    }
+
+    public void publicar() {
+        if(estrategiaPublicacao != null) {
+            estrategiaPublicacao.publicar();
+        } else {
+            System.out.println("Nenhuma estratégia de publicação foi configurada...");
+        }
     }
 
 }

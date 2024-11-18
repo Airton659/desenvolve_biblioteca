@@ -32,7 +32,7 @@ public class UsuarioTest {
     public void testGetHistoricoEmprestimos() {
         Date dataRetirada = new Date();
         Date dataDevolucao = new Date();
-        Livro livro = new Livro("Java Basics", new Autor("Alan Turing", "Inglês"), "Tecnologia", true);
+        Livro livro = new Livro("Java Basics", new Autor("Alan Turing", "Inglês",true), "Tecnologia", true);
         Usuario usuario = new Usuario("Gabriel", 21);
 
         Emprestimo emprestimo = new Emprestimo(usuario, livro, dataRetirada,dataDevolucao);

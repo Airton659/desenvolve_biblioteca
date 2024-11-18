@@ -32,7 +32,7 @@ public class PessoaTest {
 
     @Test
     public void testGetLivros() {
-        Autor autor = new Autor ("Jessica Felix", "Brasileira");
+        Autor autor = new Autor ("Jessica Felix", "Brasileira",true);
 
         Livro livro1 = new Livro("Java Básico", autor, "Tecnologia", true);
         Livro livro2 = new Livro("Java Avançado", autor, "Tecnologia", false);
@@ -48,7 +48,7 @@ public class PessoaTest {
 
     @Test
     public void testSetLivros() {
-        Autor autor = new Autor ("Jessica Felix", "Brasileira");
+        Autor autor = new Autor ("Jessica Felix", "Brasileira",true);
         Livro livroInicial = new Livro ("Livro 1", autor, "Poesia", true);
 
         Livro[] livrosInicial = {livroInicial};
